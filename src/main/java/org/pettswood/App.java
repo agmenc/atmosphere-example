@@ -8,8 +8,8 @@ public class App {
         Server server = new Server(8080);
         WebAppContext root = new WebAppContext();
 
-        root.setWar("./lib/temp/");
-//        root.setWar("./src/main/webapp");
+//        root.setWar("./temp/");
+        root.setWar("./src/main/webapp");
         root.setContextPath("/");
 
         server.setHandler(root);
