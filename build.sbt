@@ -9,6 +9,7 @@ scalaVersion := "2.9.1"
 retrieveManaged := true
 
 libraryDependencies ++= Seq(
+  "ch.qos.logback" % "logback-classic" % "1.0.0" withSources(),
   "com.sun.jersey" % "jersey-core" % "1.9.1" withSources(),
   "org.atmosphere" % "atmosphere-jersey" % "0.8.5" withSources() exclude("org.atmosphere", "atmosphere-compat-jetty"),
   "org.eclipse.jetty" % "jetty-webapp" % "8.1.0.v20120127" withSources(),
