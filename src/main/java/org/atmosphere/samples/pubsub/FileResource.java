@@ -51,16 +51,22 @@ public class FileResource {
 
     private
     @Context
-    ServletContext sc;
+    ServletContext servletContext;
 
-    @Path("/jquery/{id}")
+    @Path("/static/jquery/{id}")
     @GET
     public InputStream getJQuery(@PathParam("id") PathSegment ps) {
-        return sc.getResourceAsStream("/jquery/" + ps.getPath());
+        return servletContext.getResourceAsStream("/static/jquery/" + ps.getPath());
+    }
+
+    @Path("/static/{file}")
+    @GET
+    public InputStream getFile(@PathParam("file") PathSegment file) {
+        return servletContext.getResourceAsStream("/static/" + file.getPath());
     }
 
     @GET
     public InputStream getIndex() {
-        return sc.getResourceAsStream("/index.html");
+        return servletContext.getResourceAsStream("/home.html");
     }
 }

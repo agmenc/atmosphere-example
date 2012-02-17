@@ -38,6 +38,7 @@ package org.atmosphere.samples.pubsub;
 
 import org.atmosphere.annotation.Broadcast;
 import org.atmosphere.cpr.Broadcaster;
+import org.atmosphere.cpr.BroadcasterFactory;
 import org.atmosphere.jersey.Broadcastable;
 import org.atmosphere.jersey.SuspendResponse;
 
@@ -47,6 +48,8 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+
+import static org.pettswood.SystemConfiguration.configure;
 
 /**
  * Simple PubSub resource that demonstrate many functionality supported by
@@ -58,12 +61,12 @@ import javax.ws.rs.Produces;
 @Produces("text/html;charset=ISO-8859-1")
 public class JQueryPubSub {
 
-    private
     @PathParam("topic")
-    Broadcaster topic;
+    private Broadcaster topic;
 
     @GET
     public SuspendResponse<String> subscribe() {
+        System.out.println("PubSub = " + topic);
         return new SuspendResponse.SuspendResponseBuilder<String>()
                 .broadcaster(topic)
                 .outputComments(true)
