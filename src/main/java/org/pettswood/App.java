@@ -4,7 +4,7 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 import static ch.qos.logback.classic.Level.INFO;
-import static org.pettswood.SystemConfiguration.configure;
+import static org.pettswood.SystemConfiguration.retrieve;
 
 public class App {
     private void start() throws Exception {Server server = new Server(8080);
@@ -16,7 +16,7 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-        configure().logLevel(INFO);
+        retrieve().logLevel(INFO);
         new App().start();
     }
 }

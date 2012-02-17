@@ -49,8 +49,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import static org.pettswood.SystemConfiguration.configure;
-
 /**
  * Simple PubSub resource that demonstrate many functionality supported by
  * Atmosphere JQuery Plugin and Atmosphere Jersey extension.
@@ -62,13 +60,13 @@ import static org.pettswood.SystemConfiguration.configure;
 public class JQueryPubSub {
 
     @PathParam("topic")
-    private Broadcaster topic;
+    private String topic;
 
     @GET
     public SuspendResponse<String> subscribe() {
-        System.out.println("PubSub = " + topic);
+        System.out.println("PubSub GET = " + topic);
         return new SuspendResponse.SuspendResponseBuilder<String>()
-                .broadcaster(topic)
+                .broadcaster(broadcaster())
                 .outputComments(true)
                 .addListener(new EventsLogger())
                 .build();
@@ -77,6 +75,9 @@ public class JQueryPubSub {
     @POST
     @Broadcast
     public Broadcastable publish(@FormParam("message") String message) {
-        return new Broadcastable(message, "", topic);
+        System.out.println("PubSub POST = " + topic);
+        return new Broadcastable(message, "", broadcaster());
     }
+
+    private Broadcaster broadcaster() {return BroadcasterFactory.getDefault().lookup(topic, true);}
 }

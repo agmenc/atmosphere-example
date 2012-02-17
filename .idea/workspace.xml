@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a37e7bbf-56c3-41ae-8a71-ff600cd73100" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataSubscriber.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/pettswood/SystemConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/pubsub-demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/subscribe.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib_managed/bundles/org.atmosphere/atmosphere-runtime/atmosphere-runtime-0.8.5.jar" afterPath="" />
+    <list default="true" id="a37e7bbf-56c3-41ae-8a71-ff600cd73100" name="Default" comment="Move pub sub around and try to separate the components">
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$3e65c93f79dcee95f8e6$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$3e65c93f79dcee95f8e6$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$3e65c93f79dcee95f8e6.class" afterPath="" />
@@ -21,6 +14,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0c94280ee58d843d4b7d$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0c94280ee58d843d4b7d$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0c94280ee58d843d4b7d.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2f65d7bd30ed6401c45a$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2f65d7bd30ed6401c45a$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2f65d7bd30ed6401c45a.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$37f531df8fa450f98bde$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$37f531df8fa450f98bde.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$4337b92f61673d4e2af3$$anonfun$$sbtdef$1.class" afterPath="" />
@@ -44,6 +40,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$7c9572968efc87935274$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$7c9572968efc87935274$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$7c9572968efc87935274.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$7cc395cbea296db7fec4$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$7cc395cbea296db7fec4$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$7cc395cbea296db7fec4.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$8621ee81ba0a0f13cd4b$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$8621ee81ba0a0f13cd4b$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$8621ee81ba0a0f13cd4b.class" afterPath="" />
@@ -86,9 +85,18 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c8a756dfd361c8e09572$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c8a756dfd361c8e09572$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c8a756dfd361c8e09572.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$cb6f9a71c7c77d71e5cc$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$cb6f9a71c7c77d71e5cc$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$cb6f9a71c7c77d71e5cc.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$cf8687c3650e95da6238$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$cf8687c3650e95da6238$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$cf8687c3650e95da6238.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$da57ea7aaf0113261218$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$da57ea7aaf0113261218$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$da57ea7aaf0113261218.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$dd7e4fb06dd280c33961$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$dd7e4fb06dd280c33961$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$dd7e4fb06dd280c33961.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$df03880dfaefb79128a1$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$df03880dfaefb79128a1$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$df03880dfaefb79128a1.class" afterPath="" />
@@ -104,31 +112,32 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe842719c22efc7887d5$$anonfun$$sbtdef$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe842719c22efc7887d5$.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe842719c22efc7887d5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.1/cache/compile/compile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.1/classes/org/atmosphere/samples/pubsub/EventsLogger.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.1/classes/org/atmosphere/samples/pubsub/FileResource.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.1/classes/org/atmosphere/samples/pubsub/JQueryPubSub.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.1/classes/org/pettswood/MarketDataChangeNotifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/compilers/$global/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/$global/$global/data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/compile-inputs/$global/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/out" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/update.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery-1.6.4.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery/jquery-1.6.4.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.atmosphere.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery/jquery.atmosphere.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/jquery/jquery.form.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/jquery/jquery.form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.9.1/sbt-0.11.2/cache/update/output" afterPath="$PROJECT_DIR$/project/target/scala-2.9.1/sbt-0.11.2/cache/update/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.1/cache/update/inputs" afterPath="$PROJECT_DIR$/target/scala-2.9.1/cache/update/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.9.1/cache/update/output" afterPath="$PROJECT_DIR$/target/scala-2.9.1/cache/update/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivy-configuration/$global/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivy-configuration/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flattenlibs.sh" afterPath="$PROJECT_DIR$/flattenlibs.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/FileResource.java" afterPath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/FileResource.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/scala-2.9.1/sbt-0.11.2/cache/compile/copy-resources" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/scala-2.9.1/sbt-0.11.2/cache/update/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/scala-2.9.1/sbt-0.11.2/cache/update/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/compilers/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivy-configuration/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivy-sbt/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/project-descriptors/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/$global/$global/data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile-inputs/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/copy-resources/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/defined-sbt-plugins/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.1/cache/update/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.9.1/cache/update/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/ivy-configuration/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/ivy-sbt/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/project-descriptors/$global/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/out" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java" afterPath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataSubscriber.java" afterPath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataSubscriber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java" afterPath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/pettswood/App.java" afterPath="$PROJECT_DIR$/src/main/java/org/pettswood/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/pettswood/SystemConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/pettswood/SystemConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/subscribe.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/subscribe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/update.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/update.html" />
     </list>
     <ignored path="cometd.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -186,19 +195,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/FileResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="subscribe.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/subscribe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="33" selection-start="1628" selection-end="1628" vertical-scroll-proportion="-20.0">
+            <state line="17" column="25" selection-start="802" selection-end="802" vertical-scroll-proportion="-10.625">
               <folding />
             </state>
           </provider>
@@ -207,52 +207,16 @@
       <file leaf-file-name="JQueryPubSub.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="23" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.0">
+            <state line="54" column="2" selection-start="2469" selection-end="2469" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.12684989">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MarketDataSubscriber.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataSubscriber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="37" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MarketDataUpdater.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MarketDataUpdater.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="25" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pubsub-demo.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/pubsub-demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="33" selection-start="2325" selection-end="2325" vertical-scroll-proportion="-16.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="31" selection-start="246" selection-end="246" vertical-scroll-proportion="-6.25">
+            <state line="13" column="9" selection-start="318" selection-end="318" vertical-scroll-proportion="0.24242425">
               <folding />
             </state>
           </provider>
@@ -261,34 +225,7 @@
       <file leaf-file-name="update.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/update.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="102.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flattenlibs.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flattenlibs.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="220" selection-end="254" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/pettswood/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="20" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SystemConfiguration.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/pettswood/SystemConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="38" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+            <state line="22" column="86" selection-start="759" selection-end="759" vertical-scroll-proportion="-13.75">
               <folding />
             </state>
           </provider>
@@ -324,14 +261,15 @@
         <option value="$PROJECT_DIR$/src/main/java/org/pettswood/SystemConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/TopicSubscriber.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/subscribe.html" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/FileResource.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/pubsub-demo.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/subscribe.html" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataSubscriber.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/update.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/subscribe.html" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java" />
       </list>
     </option>
   </component>
@@ -396,7 +334,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,153 +348,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pettswood" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cometd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atmosphere" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubsub" />
+              <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,6 +361,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="146" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
     <property name="project.structure.proportion" value="0.0" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="151" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
@@ -587,14 +380,17 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="http.proxy" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
@@ -819,25 +615,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.703466" sideWeight="0.49784482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3505747" sideWeight="0.29653403" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.703466" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36970475" sideWeight="0.49712643" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -847,7 +643,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
@@ -994,34 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/pettswood/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/pettswood/SystemConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="38" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="102.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="31" selection-start="246" selection-end="246" vertical-scroll-proportion="-6.25">
@@ -1032,20 +800,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/FileResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="0" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/pubsub-demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="33" selection-start="2325" selection-end="2325" vertical-scroll-proportion="-16.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/subscribe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="33" selection-start="1628" selection-end="1628" vertical-scroll-proportion="-20.0">
           <folding />
         </state>
       </provider>
@@ -1064,16 +818,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="23" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/pubsub-demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.12684989">
+        <state line="58" column="70" selection-start="2543" selection-end="2543" vertical-scroll-proportion="57.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/pettswood/SystemConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="57" selection-start="699" selection-end="699" vertical-scroll-proportion="1.4010988">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/pettswood/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="20" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="86" selection-start="759" selection-end="759" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/subscribe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="25" selection-start="802" selection-end="802" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="2" selection-start="2469" selection-end="2469" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/MarketDataUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="9" selection-start="318" selection-end="318" vertical-scroll-proportion="0.24242425">
           <folding />
         </state>
       </provider>

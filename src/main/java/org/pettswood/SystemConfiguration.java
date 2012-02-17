@@ -10,7 +10,7 @@ public class SystemConfiguration {
     private static SystemConfiguration configuration = new SystemConfiguration();
     private SystemConfiguration() {}
 
-    public static SystemConfiguration configure() {
+    public static SystemConfiguration retrieve() {
         return configuration;
     }
 
